@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Personal Portfolio | Frontend Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav>
@@ -26,40 +28,379 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <!-- Your hero content here -->
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm
+                    <div class="name-animation-container">
+                        <span class="name-text" id="animatedName">MD. NAZMUS SHAKIB</span>
+                    </div>
+                </h1>
+                <div class="typing-text" id="typingText">
+                    <!-- Typing text will be inserted by JavaScript -->
+                </div>
+                <p style="font-size: 18px; color: var(--gray); margin-bottom: 30px;">
+                    Passionate learner and aspiring web developer with a strong interest in modern web technologies.
+                    I enjoy working with HTML, CSS, and basic web design to create clean, responsive websites.
+                </p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Image Section -->
+            <div class="profile-section">
+                <div class="profile-image-container">
+                    <div class="profile-frame"></div>
+                    <div class="profile-image" id="profileImage">
+                        <div class="profile-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <button class="upload-btn" id="uploadBtn">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+
+                <!-- Quick Stats -->
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 36px; font-weight: 800; color: var(--primary);">5+</div>
+                        <div style="color: var(--gray); font-size: 14px;">Projects</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 36px; font-weight: 800; color: var(--secondary);">100%</div>
+                        <div style="color: var(--gray); font-size: 14px;">Learning Passion</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 36px; font-weight: 800; color: var(--accent);">3+</div>
+                        <div style="color: var(--gray); font-size: 14px;">Years Learning</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <!-- Your about content here -->
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>About Me</h2>
+                <div class="section-subtitle">Get to know who I am and what I do</div>
+            </div>
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <div class="about-card">
+                        <h3 style="font-size: 32px; margin-bottom: 20px;">My Learning Journey</h3>
+                        <p>Started my coding journey with C and C++</p>
+                        <p>Currently pursuing BSc in Computer Science and Engineering</p>
+                        <p>Exploring web development with HTML, CSS, and JavaScript</p>
+                        <p>Learning backend development with PHP Laravel</p>
+                        <p>Passionate about problem-solving and creating practical solutions</p>
+                    </div>
+                </div>
+                <div class="about-text fade-in">
+                    <h3>Aspiring Web Developer & Problem Solver</h3>
+                    <p>I am a passionate learner and aspiring web developer with a strong interest in modern web
+                        technologies. I enjoy working with HTML, CSS, and basic web design to create clean, responsive
+                        websites.</p>
+
+                    <div style="margin: 30px 0;">
+                        <h4 style="color: var(--primary); margin-bottom: 15px;">My Learning Focus:</h4>
+                        <p>✅ Responsive Web Design</p>
+                        <p>✅ Frontend Development Basics</p>
+                        <p>✅ Programming Fundamentals</p>
+                        <p>✅ Database Management</p>
+                        <p>✅ Problem Solving Skills</p>
+                    </div>
+
+                    <p>When I'm not studying, you can find me working on personal projects, learning new technologies,
+                        or solving programming challenges to improve my skills.</p>
+
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 30px;">
+                        <i class="fas fa-paper-plane"></i> Let's Connect
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="edu-exp-section">
-        <!-- Your education content here -->
+    <section id="education" class="edu-exp-section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <h2>Education</h2>
+                <div class="section-subtitle">My academic journey and qualifications</div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Present</span>
+                        <h3>BSc in Computer Science and Engineering</h3>
+                        <p><strong>Undergraduate Program</strong></p>
+                        <p>Status: Final Year (On going)</p>
+                        <p>Currently pursuing degree with focus on software development</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2018-2019</span>
+                        <h3>Higher Secondary Certificate (HSC)</h3>
+                        <p><strong>Satkhira Govt College</strong></p>
+                        <p>Stream: Science</p>
+                        <p>GPA: 5.00 | Board: Jashore</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2018</span>
+                        <h3>Secondary School Certificate (SSC)</h3>
+                        <p><strong>Alipur Union Secondary School</strong></p>
+                        <p>Stream: Science</p>
+                        <p>GPA: 5.00 | Board: Jashore</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills">
-        <!-- Your skills content here -->
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Skills & Expertise</h2>
+                <div class="section-subtitle">Technologies and tools I'm learning and working with</div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <p>Building responsive web interfaces with clean code and modern practices.</p>
+                    <div class="skill-list">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Basic JavaScript</span>
+                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag">Web Design Basics</span>
+                    </div>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Programming Languages</h3>
+                    <p>Strong foundation in multiple programming languages and concepts.</p>
+                    <div class="skill-list">
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Basic Python</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Algorithms</span>
+                    </div>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tools & Backend</h3>
+                    <p>Working with development tools and learning backend technologies.</p>
+                    <div class="skill-list">
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PHP Laravel</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Database Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <!-- Your projects content here -->
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Learning Projects</h2>
+                <div class="section-subtitle">Projects I've worked on during my learning journey</div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <span class="project-badge">Learning</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Portfolio Website</h3>
+                        <p>Responsive portfolio website built with HTML, CSS, and JavaScript to showcase projects and
+                            skills. Focus on clean design and user experience.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="btn btn-outline">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <span class="project-badge">Practice</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Responsive Web Design Projects</h3>
+                        <p>Collection of responsive web pages and components created while learning modern CSS
+                            techniques and responsive design principles.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> View Projects
+                            </a>
+                            <a href="#" class="btn btn-outline">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <!-- Your contact content here -->
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Get In Touch</h2>
+                <div class="section-subtitle">Let's connect and discuss learning opportunities</div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info fade-in">
+                    <h3>Ready to Learn and Grow Together?</h3>
+                    <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 30px;">
+                        I'm currently focused on learning and building my skills in web development.
+                        Feel free to reach out if you want to collaborate on learning projects or share knowledge!
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p style="color: rgba(255, 255, 255, 0.9);">nazmusshakib335@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p style="color: rgba(255, 255, 255, 0.9);">Satkhira, Bangladesh</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h4>Education</h4>
+                                <p style="color: rgba(255, 255, 255, 0.9);">BSc in CSE (Final Year)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form fade-in">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Learning or project inquiry" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" placeholder="Share your thoughts or project ideas..." rows="5"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <!-- Your footer content here -->
+        <div class="container">
+            <div class="footer-content">
+                <h3>Let's Learn and Build Together</h3>
+                <p style="color: rgba(255, 255, 255, 0.8); margin: 20px auto 30px; max-width: 600px;">
+                    Interested in learning web development or working on projects together?
+                    Let's connect and grow our skills.
+                </p>
+                <a href="#contact" class="btn btn-primary" style="margin-bottom: 40px;">
+                    <i class="fas fa-rocket"></i> Start Learning Together
+                </a>
+                <a href="#" class="btn btn-secondary" style="margin-bottom: 40px;">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+                <div class="copyright">
+                    <p>&copy; 2024 Personal Portfolio. All rights reserved.</p>
+                    <p style="margin-top: 10px;">Designed with ❤️ for learning and growth</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- JavaScript File Link -->
     <script src="script.js"></script>
 </body>
+
 </html>
