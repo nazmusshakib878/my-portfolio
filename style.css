@@ -1,0 +1,53 @@
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --secondary: #7c3aed;
+    --accent: #0d9488;
+    --accent-light: #14b8a6;
+    --dark: #1e293b;
+    --dark-light: #334155;
+    --light: #f8fafc;
+    --light-gray: #f1f5f9;
+    --gray: #64748b;
+    --border: #e2e8f0;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 35px 60px -15px rgba(0, 0, 0, 0.2);
+    --radius: 16px;
+    --radius-lg: 24px;
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.8;
+    color: var(--dark);
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Rest of your CSS styles here */
+/* Copy all CSS from the <style> tag and paste here */
+
+/* Make sure to update image paths if you have local images */
+.profile-placeholder {
+    background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    /* Your responsive styles here */
+}
