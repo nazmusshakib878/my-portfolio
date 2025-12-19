@@ -1,7 +1,7 @@
 // Name Typing Animation
 document.addEventListener('DOMContentLoaded', function () {
     const nameElement = document.getElementById('animatedName');
-    const fullName = "Your Name"; // Change this to your name
+    const fullName = "Md. Nazmus Shakib"; // Change this to your name
     const speed = 150;
 
     nameElement.textContent = '';
@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Start animation after a short delay
     setTimeout(typeWriter, 500);
 
     // Title Typing Effect
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(typeEffect, typingSpeed);
     }
 
+    // Start title typing effect
     setTimeout(typeEffect, 1000 + fullName.length * speed);
 });
 
@@ -76,64 +78,61 @@ fadeElements.forEach(element => {
     observer.observe(element);
 });
 
-// Image Upload Functionality
+// Image Upload
 const uploadBtn = document.getElementById('uploadBtn');
 const profileImage = document.getElementById('profileImage');
 
-if (uploadBtn && profileImage) {
-    uploadBtn.addEventListener('click', () => {
-        const input = document.createElement('input');
-        input.type = 'file';
-        input.accept = 'image/*';
+uploadBtn.addEventListener('click', () => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
 
-        input.onchange = (e) => {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    profileImage.innerHTML = `<img src="${e.target.result}" style="width: 100%; height: 100%; object-fit: cover;">`;
-                    
-                    const uploadBtnIcon = uploadBtn.querySelector('i');
-                    uploadBtnIcon.className = 'fas fa-check';
-                    uploadBtnIcon.style.color = 'var(--accent)';
+    input.onchange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                profileImage.innerHTML = `<img src="${e.target.result}" style="width: 100%; height: 100%; object-fit: cover;">`;
 
-                    setTimeout(() => {
-                        uploadBtnIcon.className = 'fas fa-camera';
-                        uploadBtnIcon.style.color = '';
-                    }, 2000);
-                };
-                reader.readAsDataURL(file);
-            }
-        };
-        input.click();
-    });
-}
+                // Show success message
+                const uploadBtnIcon = uploadBtn.querySelector('i');
+                uploadBtnIcon.className = 'fas fa-check';
+                uploadBtnIcon.style.color = 'var(--accent)';
+
+                setTimeout(() => {
+                    uploadBtnIcon.className = 'fas fa-camera';
+                    uploadBtnIcon.style.color = '';
+                }, 2000);
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+
+    input.click();
+});
 
 // Form Submission
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
 
-        submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-        submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+    submitBtn.disabled = true;
 
-        // Form submission logic
-        console.log('Form submitted:', { name, email });
+    // In real application, send data to server here
+    console.log('Form submitted:', { name, email });
 
-        setTimeout(() => {
-            this.reset();
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-            alert(`Thank you ${name}! Your message has been sent. I'll get back to you soon at ${email}.`);
-        }, 3000);
-    });
-}
+    setTimeout(() => {
+        this.reset();
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        alert(`Thank you ${name}! Your message has been sent. I'll get back to you soon at ${email}.`);
+    }, 3000);
+});
 
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -154,13 +153,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Navbar background on scroll
 window.addEventListener('scroll', function () {
     const nav = document.querySelector('nav');
-    if (nav) {
-        if (window.scrollY > 50) {
-            nav.style.background = 'rgba(255, 255, 255, 0.98)';
-            nav.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.15)';
-        } else {
-            nav.style.background = 'rgba(255, 255, 255, 0.95)';
-            nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
-        }
+    if (window.scrollY > 50) {
+        nav.style.background = 'rgba(255, 255, 255, 0.98)';
+        nav.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.15)';
+    } else {
+        nav.style.background = 'rgba(255, 255, 255, 0.95)';
+        nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
     }
 });
